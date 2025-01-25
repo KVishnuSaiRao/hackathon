@@ -35,7 +35,7 @@ const SignInPage = () => {
 
     // Example of handling invalid login:
     if (formData.email === "audit@track3d.ai" || formData.password === "Testing@123") {
-        router.push('/analytics')
+        router.push('/dashboard')
     } 
   };
 
