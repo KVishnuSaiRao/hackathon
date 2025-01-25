@@ -1,4 +1,4 @@
-import Dashboard from "../src/app/components/analytics/analytics";
+import Dashboard from "../../components/analytics/analytics"
 
 export default function Index() {
   return (

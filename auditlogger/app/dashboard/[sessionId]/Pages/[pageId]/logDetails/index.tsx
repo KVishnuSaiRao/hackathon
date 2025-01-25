@@ -4,7 +4,7 @@ import { ExpandLess,ExpandMore } from "@mui/icons-material";
 import Header from "../../../../header";
 import SidePanel from "../../../../sidePannel";
 import { useQuery } from "react-query";
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation";
 import { getLogDetails } from "../../../../auditLogger";
 
 
@@ -12,7 +12,7 @@ const CollapsibleList = () => {
   const router = useRouter();
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const [nestedOpenSections, setNestedOpenSections] = useState<Record<string, boolean>>({});
-  const { sessionId,pageId } = router.query; 
+  const { sessionId, pageId } = useParams();
 const { data, isLoading, isError, error } = useQuery(
     ["logDetails", sessionId], // Query key with sessionId to differentiate requests
     () => getLogDetails(sessionId as string,pageId as string), // Query function with sessionId

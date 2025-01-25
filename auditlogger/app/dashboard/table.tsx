@@ -103,7 +103,7 @@
 
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useQuery } from "react-query";
 import { getSessions } from './auditLogger'; // Adjust the path to your API function
 

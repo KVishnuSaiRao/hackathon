@@ -15,23 +15,13 @@
 
 // export default ProcessWorkFlow
 
-
+"use client"
 import React, { useState } from "react";
 import ViewsListingTable from "./table";
 import Header from "./header";
 import SidePanel from "./sidePannel";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-export async function getServerSideProps() {
-  // Fetch data on each request, typically for user-specific data
-  const data = { message: 'This is dynamic data from the server!' };
-
-  return {
-    props: {
-      data,
-    },
-  };
-}
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

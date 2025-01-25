@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import {
   Box,
@@ -9,7 +10,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const SignInPage = () => {
   const theme = useTheme();
